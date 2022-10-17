@@ -784,9 +784,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: affec79b6fdf6644294df7bc111213fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreText: {fileID: 1868001854}
-  GameOverStatusText: {fileID: 204875115}
-  GameOverCanvas: {fileID: 1469896701}
+  _scoreText: {fileID: 1868001854}
+  _gameOverStatusText: {fileID: 204875115}
+  _gameOverCanvas: {fileID: 1469896701}
 --- !u!1 &575690335
 GameObject:
   m_ObjectHideFlags: 0

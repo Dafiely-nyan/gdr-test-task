@@ -5,12 +5,12 @@ using UnityEngine;
 public class UiController : MonoBehaviour
 {
     [SerializeField]
-    private TextMeshProUGUI ScoreText;
+    private TextMeshProUGUI _scoreText;
     
     [SerializeField]
-    private TextMeshProUGUI GameOverStatusText;
+    private TextMeshProUGUI _gameOverStatusText;
     [SerializeField]
-    private Canvas GameOverCanvas;
+    private Canvas _gameOverCanvas;
 
     private GameplayFlow _gameplayFlow;
 
@@ -21,25 +21,25 @@ public class UiController : MonoBehaviour
 
     public void SetScore()
     {
-        ScoreText.text = $"{_gameplayFlow.Score}";
+        _scoreText.text = $"{_gameplayFlow.Score}";
     }
 
     public void SetGameOver(bool failed)
     {
         if (failed)
         {
-            GameOverStatusText.text = "Failed!";
+            _gameOverStatusText.text = "Failed!";
         }
-        else GameOverStatusText.text = "Victory!";
+        else _gameOverStatusText.text = "Victory!";
         
-        GameOverCanvas.gameObject.SetActive(true);
+        _gameOverCanvas.gameObject.SetActive(true);
 
         _gameplayFlow.SetTimescale(0);
     }
 
     public void HideGameoverCanvas()
     {
-        GameOverCanvas.gameObject.SetActive(false);
+        _gameOverCanvas.gameObject.SetActive(false);
     }
 
     public void RestartGame()
